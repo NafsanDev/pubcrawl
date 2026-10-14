@@ -1,0 +1,684 @@
+# Pub Crawl Zurich translation template.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pub Crawl Zurich 1.0.0\n"
+"POT-Creation-Date: 2026-10-08 21:08+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: pubcrawl-zurich\n"
+
+#: 404.php
+msgid "404 · Page Not Found"
+msgstr ""
+
+#: 404.php
+msgid "Looks like this bar isn't on the map."
+msgstr ""
+
+#: 404.php
+msgid "The page you're looking for doesn't exist or may have moved. Let's get you back to the party."
+msgstr ""
+
+#: 404.php
+msgid "Back to Home"
+msgstr ""
+
+#: 404.php
+msgid "Book a Tour Instead"
+msgstr ""
+
+#: comments.php
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php
+msgid "Tickets"
+msgstr ""
+
+#: footer.php
+msgid "Tour Details"
+msgstr ""
+
+#: footer.php
+msgid "Language Exchange"
+msgstr ""
+
+#: footer.php
+msgid "Private Tours"
+msgstr ""
+
+#: footer.php
+msgid "Contact Us"
+msgstr ""
+
+#: footer.php
+msgid "Terms & Conditions"
+msgstr ""
+
+#: footer.php
+msgid "Also in Lucerne →"
+msgstr ""
+
+#: footer.php
+msgid "© %1$s %2$s · %3$s · %4$s"
+msgstr ""
+
+#: functions.php
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php
+msgid "Footer Widgets"
+msgstr ""
+
+#: functions.php
+msgid "Optional widgets shown in the footer of the 404 and search pages."
+msgstr ""
+
+#: header.php
+msgid "Menu"
+msgstr ""
+
+#: index.php
+msgid "Nothing found here yet."
+msgstr ""
+
+#: page.php
+msgid "Pages:"
+msgstr ""
+
+#: search.php
+msgid "Search Results"
+msgstr ""
+
+#: search.php
+msgid "Results for: %s"
+msgstr ""
+
+#: search.php
+msgid "Nothing found for that search"
+msgstr ""
+
+#: search.php
+msgid "We couldn't find anything matching \"%s\". Try different keywords, or head back to the tour info."
+msgstr ""
+
+#: searchform.php
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php
+msgid "Search the site…"
+msgstr ""
+
+#: searchform.php
+msgid "Search"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Get in Touch"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Questions about the crawl, private bookings, or partnerships? We reply fast."
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Fastest response · usually within an hour"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Phone"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Call us directly"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Email"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "For groups, partnerships & press"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Pub Crawl Zurich Red Hosts"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "You want to contact us here?"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Your email"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Your message"
+msgstr ""
+
+#: template-parts/front-page/contact.php
+msgid "Send Message"
+msgstr ""
+
+#: template-parts/front-page/event-info.php
+msgid "Next Date"
+msgstr ""
+
+#: template-parts/front-page/event-info.php
+msgid "View Full Agenda →"
+msgstr ""
+
+#: template-parts/front-page/event-info.php
+msgid "Meeting Time"
+msgstr ""
+
+#: template-parts/front-page/event-info.php
+msgid "Meeting Bar"
+msgstr ""
+
+#: template-parts/front-page/event-info.php
+msgid "Your Host"
+msgstr ""
+
+#: template-parts/front-page/event-info.php
+msgid "Look for Tourguides in Red Shirts."
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "Gallery"
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "Real Party,"
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "Real Memories"
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "A glimpse of what happens every Saturday."
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "More pictures on Instagram"
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "Open photo"
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "Close"
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "Previous photo"
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "Pub Crawl Zurich photo"
+msgstr ""
+
+#: template-parts/front-page/gallery.php
+msgid "Next photo"
+msgstr ""
+
+#: template-parts/front-page/hero.php
+msgid "Toggle sound"
+msgstr ""
+
+#: template-parts/front-page/hero.php
+msgid "Book Your Ticket"
+msgstr ""
+
+#: template-parts/front-page/hero.php
+msgid "Tour Itinerary ↓"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Students"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "With valid student ID, up to 25 years old"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Early Bird"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "available up to 48h prior to the Event"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Regular"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "VIP"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "+2 Shots"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Prices & Inclusions"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Your all-in Ticket"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "One ticket covers your entire evening — no hidden costs, no stress, no waiting in lines."
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Ticket & Prices"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Prices"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Get Your Ticket"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Secure booking · Instant confirmation"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Limited spots"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "What's Included"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Welcome Snacks"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Something salty to line your stomach before the drinks start"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Shots"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "One at each stop along the way"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Club Entry"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Skip the queue, free entry to the club"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Glow sticks"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Glow Sticks"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Light up Zurich's night"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Games"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Icebreakers & party games at the meeting bar"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Red Host"
+msgstr ""
+
+#: template-parts/front-page/included.php
+msgid "Your guide in red taking care of you"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "The Night"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Your Journey through"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Zurich's Nightlife Scene"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "We take you to 4 legendary spots — no planning needed, just show up and let the Red Hosts guide you."
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "See Tour Details"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Book Now"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Meeting Point"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Bar #1 — 2.AKT Sportsbar"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "9PM · Meet your fellow crawlers. Welcome snacks, shots, and ice-breaking games. Optional: Language Exchange from 8PM."
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Bar Stop"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Bar #2 — Heating Up"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Warming up, getting into the party mood and enjoy your free shots."
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Optional"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Bar #3 — Optional Bar"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Depending on the theme of the night, we either do a karaoke, a party bar, or skip and go straight to the Club."
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Nightclub Finale 🎉"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "The Legendary Nightclub"
+msgstr ""
+
+#: template-parts/front-page/itinerary.php
+msgid "Skip the queue. International DJ, dancing all night. A last shot is waiting."
+msgstr ""
+
+#: template-parts/front-page/reviews.php
+msgid "What People Say"
+msgstr ""
+
+#: template-parts/front-page/reviews.php
+msgid "What our participants"
+msgstr ""
+
+#: template-parts/front-page/reviews.php
+msgid "say about us"
+msgstr ""
+
+#: template-parts/front-page/reviews.php
+msgid "4.7 / 5 average rating · 500+ reviews"
+msgstr ""
+
+#: template-parts/front-page/reviews.php
+msgid "See all reviews on Google →"
+msgstr ""
+
+#: template-parts/front-page/reviews.php
+msgid "Google Review"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Pub Crawl Zurich"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Next Event — July 27, 2026"
+msgstr ""
+
+#: inc/customizer.php
+msgid "from Fr. 25.-"
+msgstr ""
+
+#: inc/customizer.php
+msgid "2.Akt Sportsbar, Selnaustrasse 2, 8001 Zürich"
+msgstr ""
+
+#: inc/customizer.php
+msgid "9:00 PM"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Every Saturday"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Pub Crawl Zurich Settings"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Hero Section"
+msgstr ""
+
+#: inc/customizer.php
+msgid "External Links"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Contact & Social"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Meeting Point & Schedule"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Ticket Prices"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Newsletter Embed"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Hero background video URL (MP4)"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Hero title"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Next event line"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Hero ticket price note"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Ticket / booking URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Tour details URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Language Exchange URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Private Tours URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Sister site URL (Lucerne)"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Google Reviews URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Google Maps link to meeting bar"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Phone (display)"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Phone (tel: link, e.g. +41792858671)"
+msgstr ""
+
+#: inc/customizer.php
+msgid "WhatsApp number (digits only, no +)"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Contact email"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Instagram URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Meetup URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "TripAdvisor URL"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Meeting bar name & address"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Meeting time"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Recurring day label"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Students price"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Early bird price"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Regular price"
+msgstr ""
+
+#: inc/customizer.php
+msgid "VIP price"
+msgstr ""
+
+#: inc/customizer.php
+msgid "Newsletter signup embed HTML (e.g. Brevo). Leave empty to hide."
+msgstr ""
+
+#: inc/multilingual.php
+msgid "Pub Crawl Zurich is translation-ready. Install Polylang or WPML to manage EN/DE/FR content and the language switcher."
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Home"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Dates & Tickets"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Contact"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "My night out with pub crawl Zurich was one of the coolest nights I had in the city. I met amazing people, sang and danced all night long. I recommend it to anyone visiting Zurich!"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Really well spent night, great crowd, nice bars. The mix of tourists and locals gives you the opportunity to meet many new great people and have some interesting conversations!"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "I met a lot of interesting people and had fun. It was a well organised pub crawl. The guides are all very outgoing and make sure the atmosphere is joyful. Would absolutely recommend!"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "The tour was organised very well by Sebastien and the places we visited were great. I met a lot of great people on the tour. Best night out in Zurich!"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Together we party — Pub Crawl Zurich"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Big group of party people Zurich"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Ausgang in Zürich nightlife"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Girls clubbing in Zurich"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Boat party Zurich"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Meet people at Pub Crawl Zurich"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "Red Hosts and the crowd — Pub Crawl Zurich"
+msgstr ""
+
+#: comments.php
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""
+
