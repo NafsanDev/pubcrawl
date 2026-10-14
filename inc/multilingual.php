@@ -54,15 +54,17 @@ function pcz_map_german_url() {
         'private-tours'                => 'private-touren',
         'private-tours/bachelor-party' => 'private-touren/polterabend',
         'private-tours/company-event'  => 'private-touren/geburtstag',
-        'private-tours/birthday-party' => 'private-touren/firmenevent'
+        'private-tours/birthday-party' => 'private-touren/firmenevent',
+		'terms-and-conditions'         => 'termes-et-conditions',
     );
     $fr_map = array(
-        'fr/languageexchange-2'             => 'sprachaustausch',
-		'fr/bartour-2'                      => 'bartour',
-        'fr/private-tours-2'                => 'private-touren',
-        'fr/private-tours/bachelor-party-2' => 'private-touren/polterabend',
-        'fr/private-tours/company-event-2'  => 'private-touren/geburtstag',
-        'fr/private-tours/birthday-party-2' => 'private-touren/firmenevent'
+        'fr/echange-linguistique'                => 'sprachaustausch',
+		'fr/details-visite'                      => 'bartour',
+        'fr/tours-prives'                        => 'private-touren',
+        'fr/tours-prives/enterrement-de-garcon'  => 'private-touren/polterabend',
+        'fr/tours-prives/anniversaire'           => 'private-touren/geburtstag',
+        'fr/tours-prives/evenement-dentreprise'  => 'private-touren/firmenevent',
+		'fr/termes-et-conditions'                => 'termes-et-conditions'
     );
     // 4. Select the correct map stack based on Polylang's active state
     $active_map = ($current_lang === 'fr') ? $fr_map : $en_map;

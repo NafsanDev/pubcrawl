@@ -1673,7 +1673,7 @@ nav ul.primary-menu li a:hover, nav ul.pcz-fallback-menu li a:hover { color: var
 .mob-menu ul.pcz-fallback-menu li { display: flex; flex-wrap: wrap; width: 100%; }
 .mob-menu ul.pcz-fallback-menu li a { display: block; width: 100%; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); color: var(--navy); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all; }
 .mob-menu ul.pcz-fallback-menu li a:hover { color: var(--red); }
-li.current_page_item a {color: var(--navy) !important; }
+nav li.current_page_item a {color: var(--navy) !important; }
 .menu-item-has-children { position: relative; }
 .menu-item-has-children > .dropdown-toggle {
   background: none;
