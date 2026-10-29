@@ -1,0 +1,16 @@
+:root {
+  --red: #C8102E;
+  --red-dark: #9B0B21;
+  --navy: #213180;
+  --gold: #D4A017;
+  --cream: #FFFFFF;
+  --white: #FFFFFF;
+  --gray: #6B7280;
+  --text: #1A1A2E;
+}
+/* SECTIONS */
+.section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--navy); line-height: 1.15; margin-bottom: 1rem; }
+.section-desc { font-size: 1.05rem; color: var(--gray); max-width: 560px; line-height: 1.7; }
+
+.itinerary { background: var(--cream); }

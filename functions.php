@@ -19,9 +19,12 @@ function pcz_setup() {
 
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'custom-logo', array( 'height' => 56, 'width' => 56, 'flex-height' => true, 'flex-width' => true ) );
+	add_theme_support( 'custom-logo', array( 'height' => 66, 'width' => 66, 'flex-height' => true, 'flex-width' => true ) );
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) );
 	add_theme_support( 'responsive-embeds' );
+	add_theme_support('editor-styles');
+    add_theme_support('wp-block-styles');
+    add_editor_style('assets/css/theme-editor.css');
 
 	register_nav_menus(
 		array(
@@ -35,12 +38,22 @@ add_action( 'after_setup_theme', 'pcz_setup' );
 
 function pcz_scripts() {
 	wp_enqueue_style( 'pcz-fonts', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap', array(), null );
+	wp_enqueue_style( 'pcz-editor-style', PCZ_URI . '/assets/css/theme-editor.css', PCZ_VERSION, true );
 	wp_enqueue_style( 'pcz-style', get_stylesheet_uri(), array( 'pcz-fonts' ), PCZ_VERSION );
-	wp_enqueue_script( 'pcz-main', PCZ_URI . '/js/main.js', array(), PCZ_VERSION, true );
-	wp_enqueue_script( 'pcz-contact-form', PCZ_URI . '/js/contact-form.js', array(), PCZ_VERSION, true );
+	wp_enqueue_script( 'pcz-main', PCZ_URI . '/assets/js/main.js', array(), PCZ_VERSION, true );
+	wp_enqueue_script( 'pcz-contact-form', PCZ_URI . '/assets/js/contact-form.js', array(), PCZ_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+	if ( is_page_template( 'custom-tour-details.php' ) ) {
+		wp_enqueue_style( 'pcz-tour-details-style', PCZ_URI . '/assets/css/tour-details.css', PCZ_VERSION, true );
+	}
+	if ( is_page_template( 'custom-language-exchange.php' ) ) {
+		wp_enqueue_style( 'pcz-exchange-style', PCZ_URI . '/assets/css/exchange.css', PCZ_VERSION, true );
+	}
+	if ( is_page_template( 'custom-private-tours.php' ) ) {
+		wp_enqueue_style( 'pcz-private-tours', PCZ_URI . '/assets/css/private-tours.css', PCZ_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pcz_scripts' );
@@ -98,3 +111,5 @@ function custom_menu_html_modifications( $nav_menu, $args ) {
 require PCZ_DIR . '/inc/customizer.php';
 require PCZ_DIR . '/inc/template-tags.php';
 require PCZ_DIR . '/inc/multilingual.php';
+require PCZ_DIR . '/inc/eventfrog-api.php';
+

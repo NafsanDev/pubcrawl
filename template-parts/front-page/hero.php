@@ -27,13 +27,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a href="<?php echo esc_url( pcz_get( 'pcz_ticket_url' ) ); ?>" class="btn-primary" target="_blank" rel="noopener">
 				🎟 <?php esc_html_e( 'Book Your Ticket', 'pubcrawl-zurich' ); ?>
 				<?php if ( pcz_get( 'pcz_ticket_price_note' ) ) : ?>
-					<span style="opacity:0.75; font-weight:400; font-size:0.85em; margin-left:6px; border-left:1px solid rgba(255,255,255,0.4); padding-left:8px;"><?php echo esc_html( pcz_get( 'pcz_ticket_price_note' ) ); ?></span>
+					<span style="opacity:0.75; font-weight:400; font-size:0.85em; margin-left:6px; border-left:1px solid rgba(255,255,255,0.4); padding-left:8px;">from <?php echo esc_html( pcz_get( 'pcz_ticket_price_note' ) ); ?></span>
 				<?php endif; ?>
 			</a>
 			<a href="#itinerary" class="btn-secondary"><?php esc_html_e( 'Tour Itinerary ↓', 'pubcrawl-zurich' ); ?></a>
 		</div>
-		<?php if ( pcz_get( 'pcz_next_event' ) ) : ?>
-			<div class="hero-next-event">📅 <?php echo esc_html( pcz_get( 'pcz_next_event' ) ); ?></div>
-		<?php endif; ?>
+		<div class="hero-next-event">📅 Next Event — <?php echo _e(do_shortcode('[eventfrog_date]'), 'pubcrawl-zurich'); ?></div>
 	</div>
 </section>

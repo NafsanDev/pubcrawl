@@ -55,7 +55,7 @@ $pcz_tiers = array(
 							<p><?php esc_html_e( 'Something salty to line your stomach before the drinks start', 'pubcrawl-zurich' ); ?></p>
 						</div>
 						<div class="inc-item">
-							<div class="inc-top"><span class="inc-emoji"><img class="inc-photo" src="<?php echo esc_url( PCZ_URI . '/assets/images/shots-icon.png' ); ?>" alt="<?php esc_attr_e( 'Shots', 'pubcrawl-zurich' ); ?>" loading="lazy"></span><div class="inc-check-badge">✓</div></div>
+							<div class="inc-top"><span class="inc-emoji">🍷</span><div class="inc-check-badge">✓</div></div>
 							<h4><?php esc_html_e( 'Shots', 'pubcrawl-zurich' ); ?></h4>
 							<p><?php esc_html_e( 'One at each stop along the way', 'pubcrawl-zurich' ); ?></p>
 						</div>
@@ -65,7 +65,7 @@ $pcz_tiers = array(
 							<p><?php esc_html_e( 'Skip the queue, free entry to the club', 'pubcrawl-zurich' ); ?></p>
 						</div>
 						<div class="inc-item">
-							<div class="inc-top"><span class="inc-emoji"><img class="inc-photo" src="<?php echo esc_url( PCZ_URI . '/assets/images/glow-sticks-icon-v2.png' ); ?>" alt="<?php esc_attr_e( 'Glow sticks', 'pubcrawl-zurich' ); ?>" loading="lazy"></span><div class="inc-check-badge">✓</div></div>
+							<div class="inc-top"><span class="inc-emoji">🧪</span><div class="inc-check-badge">✓</div></div>
 							<h4><?php esc_html_e( 'Glow Sticks', 'pubcrawl-zurich' ); ?></h4>
 							<p><?php esc_html_e( "Light up Zurich's night", 'pubcrawl-zurich' ); ?></p>
 						</div>

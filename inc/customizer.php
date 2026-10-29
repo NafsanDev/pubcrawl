@@ -25,11 +25,8 @@ function pcz_defaults() {
 		'pcz_hero_video_url'     => 'https://video.wixstatic.com/video/dfa67d_f12799cc6f0d47a7b974656a7936b0f4/1080p/mp4/file.mp4',
 		'pcz_hero_title'         => 'Pub Crawl Zurich',
 		'pcz_next_event'         => 'Next Event — July 27, 2026',
-		'pcz_ticket_price_note'  => 'from Fr. 25.-',
+		'pcz_ticket_price_note'  => 'from Fr. 25.-',		
 		'pcz_ticket_url'         => 'https://eventfrog.ch/en/p/gruppen/pub-crawl-zurich-7262837580701343532.html',
-		'pcz_tour_details_url'   => 'https://www.zurichpubcrawl.ch/bartour?lang=en',
-		'pcz_lang_exchange_url'  => 'https://www.zurichpubcrawl.ch/sprachaustausch?lang=en',
-		'pcz_private_tours_url'  => 'https://www.pubcrawlzurich.com/polterabend',
 		'pcz_lucerne_url'        => 'https://www.luzernpubcrawl.ch',
 		'pcz_google_reviews_url' => 'https://www.google.com/search?q=pub+crawl+zurich+reviews',
 		'pcz_maps_url'           => 'https://maps.app.goo.gl/fV8a8uWt6DnrxNJ46',
@@ -48,6 +45,8 @@ function pcz_defaults() {
 		'pcz_price_early'        => 'CHF 25.-',
 		'pcz_price_regular'      => 'CHF 29.-',
 		'pcz_price_vip'          => 'CHF 35.-',
+		'pcz_le_price_note'  	 => '10.–',
+		'pcz_bachelor_party_price' => 'CHF 45.–',
 		'pcz_newsletter_embed'   => '',
 	);
 }
@@ -102,9 +101,6 @@ function pcz_customize_register( $wp_customize ) {
 		'pcz_next_event'         => array( 'pcz_hero', __( 'Next event line', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_ticket_price_note'  => array( 'pcz_hero', __( 'Hero ticket price note', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_ticket_url'         => array( 'pcz_links', __( 'Ticket / booking URL', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
-		'pcz_tour_details_url'   => array( 'pcz_links', __( 'Tour details URL', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
-		'pcz_lang_exchange_url'  => array( 'pcz_links', __( 'Language Exchange URL', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
-		'pcz_private_tours_url'  => array( 'pcz_links', __( 'Private Tours URL', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
 		'pcz_lucerne_url'        => array( 'pcz_links', __( 'Sister site URL (Lucerne)', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
 		'pcz_google_reviews_url' => array( 'pcz_links', __( 'Google Reviews URL', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
 		'pcz_maps_url'           => array( 'pcz_links', __( 'Google Maps link to meeting bar', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
@@ -123,6 +119,8 @@ function pcz_customize_register( $wp_customize ) {
 		'pcz_price_early'        => array( 'pcz_prices', __( 'Early bird price', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_price_regular'      => array( 'pcz_prices', __( 'Regular price', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_price_vip'          => array( 'pcz_prices', __( 'VIP price', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
+		'pcz_le_price_note'      => array( 'pcz_prices', __( 'Language exchange price', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
+		'pcz_bachelor_party_price' => array( 'pcz_prices', __( 'Bachelor party price', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_newsletter_embed'   => array( 'pcz_news', __( 'Newsletter signup embed HTML (e.g. Brevo). Leave empty to hide.', 'pubcrawl-zurich' ), 'textarea', 'pcz_sanitize_embed' ),
 	);
 
@@ -142,4 +140,11 @@ function pcz_sanitize_embed( $value ) {
 		return $value;
 	}
 	return wp_kses_post( $value );
+}
+
+function pcz_truncate_address() {
+	$meeting_bar = pcz_get( 'pcz_meeting_bar' );
+	$truncated = mb_strimwidth( $meeting_bar, 0, 15, '' );
+
+	return $truncated;
 }

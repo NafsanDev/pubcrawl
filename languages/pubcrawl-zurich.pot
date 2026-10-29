@@ -8,21 +8,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: pubcrawl-zurich\n"
 
-#: 404.php
-msgid "404 · Page Not Found"
-msgstr ""
-
-#: 404.php
-msgid "Looks like this bar isn't on the map."
-msgstr ""
-
-#: 404.php
-msgid "The page you're looking for doesn't exist or may have moved. Let's get you back to the party."
-msgstr ""
-
-#: 404.php
-msgid "Back to Home"
-msgstr ""
+#: October
+msgid "October"
+msgstr "Octobre"
 
 #: 404.php
 msgid "Book a Tour Instead"

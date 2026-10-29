@@ -127,6 +127,37 @@
 				this.setAttribute('aria-expanded', !isExpanded);
 			});
 		});
+
+		// Back to top button visibility
+		const backTop = document.getElementById('back-top');
+		const footer = document.getElementById('site-footer');
+		const navbar     = document.getElementById('navbar');
+
+		function updateBackToTop() {
+			if (!backTop || !footer) return;
+			const scrollY = window.scrollY;
+			const viewportH = window.innerHeight;
+			const footerTop = footer.offsetTop;
+
+			navbar.classList.toggle('scrolled', scrollY > 60);
+
+			if (scrollY > viewportH && scrollY + viewportH < footerTop - 100) {
+				backTop.classList.add('visible');
+			} else {
+				backTop.classList.remove('visible');
+			}
+		}
+
+		window.addEventListener('scroll', updateBackToTop);
+		window.addEventListener('resize', updateBackToTop);
+		updateBackToTop();
+
+		// Back to top click
+		if (backTop) {
+			backTop.addEventListener('click', () => {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			});
+		}
 		
 	} );
 } )();

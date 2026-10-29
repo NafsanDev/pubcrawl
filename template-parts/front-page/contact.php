@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="contact-right fade-up" style="width:100%; height:100%;">
 				<div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:1.5rem; width:100%; height:100%; box-sizing:border-box; display:flex; flex-direction:column;">
 					<div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
-						<img src="<?php echo esc_url( PCZ_URI . '/assets/images/red-photo.jpg' ); ?>" alt="<?php esc_attr_e( 'Pub Crawl Zurich Red Hosts', 'pubcrawl-zurich' ); ?>" style="width:76px; height:76px; object-fit:cover; object-position:top center; border-radius:50%; border:2px solid rgba(255,255,255,0.2); flex-shrink:0;">
+						<img src="<?php echo esc_url( PCZ_URI . '/assets/images/home/red-photo.png' ); ?>" alt="<?php esc_attr_e( 'Pub Crawl Zurich Red Hosts', 'pubcrawl-zurich' ); ?>" style="width:76px; height:76px; object-fit:cover; object-position:top center; border-radius:50%; border:2px solid rgba(255,255,255,0.2); flex-shrink:0;">
 						<h3 style="font-family:'Playfair Display', serif; font-size:1.05rem; color:var(--white); margin:0;"><?php esc_html_e( 'You want to contact us here?', 'pubcrawl-zurich' ); ?></h3>
 					</div>
 

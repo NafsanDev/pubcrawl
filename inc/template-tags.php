@@ -56,23 +56,23 @@ function pcz_get_reviews() {
 /** Gallery images (filterable). Wix IDs → thumb + full-size URLs. */
 function pcz_get_gallery_images() {
 	$ids = array(
-		'dfa67d_aea76048a8234d09a575eabf8c332ad6' => __( 'Together we party — Pub Crawl Zurich', 'pubcrawl-zurich' ),
-		'dfa67d_1d373e342896488f88c6ab78bb4c769c' => __( 'Big group of party people Zurich', 'pubcrawl-zurich' ),
-		'dfa67d_1d47bd1ae3d546ba8487913676757e64' => __( 'Ausgang in Zürich nightlife', 'pubcrawl-zurich' ),
-		'dfa67d_2fb65a60a51f4c59b52b0279173ace36' => __( 'Girls clubbing in Zurich', 'pubcrawl-zurich' ),
-		'dfa67d_4c4de610d8d247eb9a589a8d59fc250b' => __( 'Boat party Zurich', 'pubcrawl-zurich' ),
-		'dfa67d_da3a439f53fb4b7cb4f789a16ec75dba' => __( 'Meet people at Pub Crawl Zurich', 'pubcrawl-zurich' ),
+		'gallery-item-1' => __( 'Together we party — Pub Crawl Zurich', 'pubcrawl-zurich' ),
+		'gallery-item-2' => __( 'Big group of party people Zurich', 'pubcrawl-zurich' ),
+		'gallery-item-3' => __( 'Ausgang in Zürich nightlife', 'pubcrawl-zurich' ),
+		'gallery-item-4' => __( 'Girls clubbing in Zurich', 'pubcrawl-zurich' ),
+		'gallery-item-5' => __( 'Boat party Zurich', 'pubcrawl-zurich' ),
+		'gallery-item-6' => __( 'Meet people at Pub Crawl Zurich', 'pubcrawl-zurich' ),
 	);
 	$images = array();
 	foreach ( $ids as $id => $alt ) {
-		$base     = 'https://static.wixstatic.com/media/' . $id . '~mv2.jpg/v1/fill/';
+		$base     = PCZ_URI . '/assets/images/home/';
 		$images[] = array(
-			'src'  => $base . 'w_960,h_720,al_c,q_85/' . $id . '~mv2.jpg',
-			'full' => $base . 'w_1600,h_1200,al_c,q_90/' . $id . '~mv2.jpg',
+			'src'  => $base . $id . '.jpg',
+			'full' => $base . $id . '.jpg',
 			'alt'  => $alt,
 		);
 	}
-	$local = PCZ_URI . '/assets/images/hero-fallback.jpg';
+	$local = PCZ_URI . '/assets/images/home/hero-fallback.avif';
 	$images[] = array( 'src' => $local, 'full' => $local, 'alt' => __( 'Red Hosts and the crowd — Pub Crawl Zurich', 'pubcrawl-zurich' ) );
 	return apply_filters( 'pcz_gallery_images', $images );
 }

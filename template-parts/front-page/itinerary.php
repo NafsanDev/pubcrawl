@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p class="section-desc"><?php esc_html_e( 'We take you to 4 legendary spots — no planning needed, just show up and let the Red Hosts guide you.', 'pubcrawl-zurich' ); ?></p>
 			</div>
 			<div class="itin-book-desktop fade-up" style="gap:0.75rem; flex-shrink:0; align-items:center;">
-				<a href="<?php echo esc_url( pcz_get( 'pcz_tour_details_url' ) ); ?>" target="_blank" rel="noopener" class="btn-secondary-navy"><?php esc_html_e( 'See Tour Details', 'pubcrawl-zurich' ); ?></a>
+				<a href="https://www.zurichpubcrawl.ch/bartour/" target="_blank" rel="noopener" class="btn-secondary-navy"><?php esc_html_e( 'See Tour Details', 'pubcrawl-zurich' ); ?></a>
 				<a href="<?php echo esc_url( pcz_get( 'pcz_ticket_url' ) ); ?>" class="btn-primary" target="_blank" rel="noopener">🎟 <?php esc_html_e( 'Book Now', 'pubcrawl-zurich' ); ?></a>
 			</div>
 		</div>
@@ -32,8 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="stops-grid">
 				<div class="stop-col">
 					<span class="stop-badge start"><?php esc_html_e( 'Meeting Point', 'pubcrawl-zurich' ); ?></span>
-					<h3><?php esc_html_e( 'Bar #1 — 2.AKT Sportsbar', 'pubcrawl-zurich' ); ?></h3>
-					<p><?php esc_html_e( '9PM · Meet your fellow crawlers. Welcome snacks, shots, and ice-breaking games. Optional: Language Exchange from 8PM.', 'pubcrawl-zurich' ); ?></p>
+					<h3>Bar #1 — <?php echo esc_html( pcz_truncate_address() ); ?></h3>
+					<p><?php echo esc_html( pcz_get( 'pcz_meeting_time' ) ); ?> · Meet your fellow crawlers. Welcome snacks, shots, and ice-breaking games. Optional: Language Exchange from 8PM.</p>
 				</div>
 				<div class="stop-col">
 					<span class="stop-badge bar"><?php esc_html_e( 'Bar Stop', 'pubcrawl-zurich' ); ?></span>

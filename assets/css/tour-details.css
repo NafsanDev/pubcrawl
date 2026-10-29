@@ -1,0 +1,283 @@
+/* TOUR DETAILS PAGE  */
+/*  PAGE HERO  */
+.page-hero {
+  padding: 8rem 2rem 4rem;
+  min-height: 50vh;
+  background: url('../images/home/hero-fallback.avif') center center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 50% 60% at 100% 0%, rgba(200,16,46,0.15) 0%, transparent 55%);
+  pointer-events: none;
+}
+/* Text backdrop in hero */
+.hero-text-backdrop {
+  display: block;
+  background: rgba(33,49,128,0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  max-width: 480px;
+  margin-bottom: 4rem;
+  border-left: 4px solid var(--red);
+}
+.page-hero h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 0.75rem; }
+.page-hero-desc { font-size: 0.88rem; color: rgba(255,255,255,0.75); max-width: 440px; line-height: 1.6; margin-bottom: 0; }
+.hero-photo-btn {
+    display: inline;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    z-index: 5;
+    transition: background 0.2s, border-color 0.2s;
+}
+.hero-photo-btn:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: white;
+}
+@media (max-width: 768px) {
+    .page-hero {
+        position: relative;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .hero-text-backdrop { padding: 1.25rem 1.25rem; border-radius: 10px; max-width: 100%; }
+    .hero-photo-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+    }
+}
+/* ITINERARY PORTRAIT */
+.itin-section { background: #F0F4FF; }
+
+.itin-portrait {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+/* Vertical line running through all stops */
+.itin-portrait::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--navy), rgba(33,49,128,0.15));
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.itin-stop {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 0 1.5rem;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left: number dot */
+.itin-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.itin-dot {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  position: relative; z-index: 2;
+  box-shadow: 0 0 0 4px #F0F4FF;
+}
+.itin-dot.meeting,
+.itin-dot.bar,
+.itin-dot.party,
+.itin-dot.club {
+  background: var(--white);
+  border: 3px solid var(--red);
+  color: var(--red);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.itin-dot.transfer {
+  background: #F0F4FF;
+  border: 2px dashed rgba(33,49,128,0.3);
+  width: 36px; height: 36px;
+  font-size: 0.9rem;
+  margin: 0 10px;
+}
+.itin-spacer { flex: 1; }
+
+/* Right: card */
+.itin-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(33,49,128,0.08);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+.itin-card:hover { box-shadow: 0 6px 28px rgba(33,49,128,0.1); }
+
+.itin-transfer-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0.5rem 0 0.5rem 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--gray);
+  font-weight: 500;
+  font-style: italic;
+}
+.itin-transfer-card:hover { box-shadow: none; }
+
+.itin-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.itin-badge {
+  display: inline-block;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 100px; white-space: nowrap; flex-shrink: 0;
+}
+.badge-meeting { background: #EEF2FF; color: #3730A3; }
+.badge-bar     { background: #FEF3C7; color: #92400E; }
+.badge-party   { background: rgba(200,16,46,0.1); color: var(--red-dark); }
+.badge-club    { background: #1A1A2E; color: var(--white); }
+.badge-opt     { background: #F3F4F6; color: #374151; }
+
+.itin-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.2; }
+.itin-card-location { font-size: 0.78rem; color: var(--gray); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 4px; }
+.itin-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.65; }
+
+.itin-includes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.itin-include-tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--white);
+  border: 1px solid rgba(33,49,128,0.12);
+  color: var(--navy);
+  font-size: 0.75rem; font-weight: 600;
+  padding: 4px 10px; border-radius: 100px;
+}
+.itin-include-tag.vip {
+  background: rgba(212,160,23,0.1);
+  border-color: rgba(212,160,23,0.4);
+  color: #92400E;
+}
+
+/* time label */
+.itin-time {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  background: var(--navy);
+  padding: 3px 10px; border-radius: 100px;
+  white-space: nowrap; flex-shrink: 0;
+}
+.itin-time.gold { background: var(--gold); color: #1A1A2E; }
+.itin-time.red  { background: var(--red); }
+.itin-time.dark { background: #1A1A2E; }
+
+.itin-dot-col .itin-spacer-line {
+  width: 3px;
+  flex: 1;
+  min-height: 1rem;
+}
+
+@media (max-width: 640px) {
+  .itin-portrait::before { left: 18px; }
+  .itin-stop { grid-template-columns: 44px 1fr; gap: 0 1rem; }
+  .itin-dot { width: 44px; height: 44px; font-size: 1rem; }
+  .itin-dot.transfer { width: 28px; height: 28px; margin: 0 8px; font-size: 0.75rem; }
+  .itin-card { padding: 1.25rem; }
+  .itin-card h3 { font-size: 1rem; }
+}
+/*  Event info  */
+.event-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.event-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 2rem;
+}
+.event-details-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.detail-content { align-items: flex-start; }
+
+@media (max-width: 768px) { 
+    .event-layout {  grid-template-columns: 1fr; } 
+}
+
+/*  FAQ  */
+.faq-section { background: var(--white); }
+.faq-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0 2.5rem;
+    margin-top: 2.5rem;
+}
+@media (max-width: 768px) { 
+    .faq-grid { flex-direction: column; } 
+}
+.faq-item { border-bottom: 1px solid rgba(0,0,0,0.07); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { width: 100%; text-align: left; background: none; border: none; padding: 1rem 0; display: flex; justify-content: space-between; align-items: center; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; font-weight: 600; color: var(--navy); cursor: pointer; gap: 10px; }
+.faq-q:hover { color: var(--red); }
+.faq-chevron { font-size: 1rem; color: var(--gray); transition: transform 0.2s; flex-shrink: 0; }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-a { font-size: 0.85rem; color: var(--gray); line-height: 1.65; max-height: 0; overflow: hidden; padding-bottom: 0; transition: max-height 0.3s ease, padding-bottom 0.2s; }
+.faq-item.open .faq-a { max-height: 320px; padding-bottom: 1rem; }
+.faq-more { text-align: center; margin-top: 2rem; }
+

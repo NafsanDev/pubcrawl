@@ -53,9 +53,9 @@ function pcz_map_german_url() {
 		'bartour'                      => 'bartour',
         'private-tours'                => 'private-touren',
         'private-tours/bachelor-party' => 'private-touren/polterabend',
-        'private-tours/company-event'  => 'private-touren/geburtstag',
-        'private-tours/birthday-party' => 'private-touren/firmenevent',
-		'terms-and-conditions'         => 'termes-et-conditions',
+        'private-tours/birthday-party' => 'private-touren/geburtstag',
+        'private-tours/company-event'  => 'private-touren/firmenevent',
+		'terms-and-conditions'         => 'allgemeine-geschaftsbedingungen'
     );
     $fr_map = array(
         'fr/echange-linguistique'                => 'sprachaustausch',
@@ -64,14 +64,14 @@ function pcz_map_german_url() {
         'fr/tours-prives/enterrement-de-garcon'  => 'private-touren/polterabend',
         'fr/tours-prives/anniversaire'           => 'private-touren/geburtstag',
         'fr/tours-prives/evenement-dentreprise'  => 'private-touren/firmenevent',
-		'fr/termes-et-conditions'                => 'termes-et-conditions'
+		'fr/termes-et-conditions'                => 'allgemeine-geschaftsbedingungen'
     );
     // 4. Select the correct map stack based on Polylang's active state
     $active_map = ($current_lang === 'fr') ? $fr_map : $en_map;
     // 5. Look up the German path. If not found, default to an empty string (Home page)
     $de_path = isset($active_map[$current_path]) ? $active_map[$current_path] : '';
     // 6. Construct the external German target URL (Update with your actual German domain)
-    $german_base_url = 'https://www.zurichpubcrawl.ch/';
+    $german_base_url = 'https://german.dltbonlinebooking.ph/';
     $german_url = user_trailingslashit( rtrim($german_base_url, '/') . '/' . $de_path );
 
 	return $german_url;

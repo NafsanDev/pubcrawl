@@ -13,15 +13,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<nav>
+<nav id="navbar">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-logo">
 		<?php if ( has_custom_logo() ) : ?>
 			<?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full', false, array( 'class' => 'custom-logo' ) ); ?>
+		<?php else : ?>
+			<img src="<?php echo PCZ_URI . '/assets/images/Pub-Crawl-Zurich.webp'; ?>" alt="Seb's Pub Crawl Zurich">
 		<?php endif; ?>
 		<div class="nav-name">
 			<?php bloginfo( 'name' ); ?>

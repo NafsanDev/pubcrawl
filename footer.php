@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<footer>
+<footer id="site-footer">
 	<a href="<?php echo esc_url( pcz_get( 'pcz_ticket_url' ) ); ?>" target="_blank" rel="noopener" class="footer-book-mobile">🎟 <?php esc_html_e( 'Tickets', 'pubcrawl-zurich' ); ?></a>
 
 	<div class="social-icons">
@@ -59,6 +59,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 	</p>
 </footer>
+
+<button id="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="visible">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
 
 <?php wp_footer(); ?>
 </body>
