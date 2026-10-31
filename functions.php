@@ -33,6 +33,7 @@ function pcz_setup() {
 			'mobile'  => esc_html__( 'Mobile Menu', 'pubcrawl-zurich' ),
 		)
 	);
+	register_customizer_strings_for_polylang();
 }
 add_action( 'after_setup_theme', 'pcz_setup' );
 
@@ -112,4 +113,17 @@ require PCZ_DIR . '/inc/customizer.php';
 require PCZ_DIR . '/inc/template-tags.php';
 require PCZ_DIR . '/inc/multilingual.php';
 require PCZ_DIR . '/inc/eventfrog-api.php';
+
+function register_customizer_strings_for_polylang() {
+    if ( function_exists('pll_register_string') ) {
+        
+        // Pull the active values from the customizer to seed the dictionary
+        $string_one = get_theme_mod('pcz_meeting_time', pcz_get('pcz_meeting_time'));
+        $string_two = get_theme_mod('pcz_meeting_day', pcz_get('pcz_meeting_day'));
+
+        // Register strings: pll_register_string( $label, $string, $group )
+        pll_register_string('meeting_time', $string_one, 'Theme Strings');
+        pll_register_string('meeting_date', $string_two, 'Theme Strings');
+    }
+}
 

@@ -3,6 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 ?>
 <section class="hero" id="top">
 	<div class="hero-bg-photo"></div>
@@ -32,6 +33,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</a>
 			<a href="#itinerary" class="btn-secondary"><?php esc_html_e( 'Tour Itinerary ↓', 'pubcrawl-zurich' ); ?></a>
 		</div>
-		<div class="hero-next-event">📅 Next Event — <?php echo _e(do_shortcode('[eventfrog_date]'), 'pubcrawl-zurich'); ?></div>
+		<div class="hero-next-event">📅 Next Event — <?php echo do_shortcode('[eventfrog_date]') ?></div>
 	</div>
 </section>

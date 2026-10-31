@@ -148,3 +148,17 @@ function pcz_multilingual_admin_notice() {
 	echo '<div class="notice notice-info is-dismissible"><p>' . esc_html__( 'Pub Crawl Zurich is translation-ready. Install Polylang or WPML to manage EN/DE/FR content and the language switcher.', 'pubcrawl-zurich' ) . '</p></div>';
 }
 add_action( 'admin_notices', 'pcz_multilingual_admin_notice' );
+
+function pcz_translated_string($optionName, $optionValue) {
+	$stringName = get_theme_mod($optionName, $optionValue);
+	$translated = function_exists('pll__') ? pll__($stringName) : $stringName;
+
+	return $translated;
+}
+
+/*add_action('init', function() {
+    // Syntax: pll_register_string($name, $string, $group, $multiline);
+    pll_register_string('October English', 'October', 'Theme Strings');
+    //pll_register_string('pubcrawl-zurich', 'Search results for:', 'Theme Strings');
+    //pll_register_string('pubcrawl-zurich', 'Page not found', 'Theme Strings');
+});*/

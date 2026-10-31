@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="stop-col">
 					<span class="stop-badge start"><?php esc_html_e( 'Point de rencontre', 'pubcrawl-zurich' ); ?></span>
 					<h3>Bar #1 — <?php echo esc_html( pcz_truncate_address() ); ?></h3>
-					<p><?php echo esc_html( pcz_get( 'pcz_meeting_time' ) ); ?> · Fais connaissance avec les autres participants. Snacks de bienvenue, shots et jeux brise-glace. En option : échange linguistique dès 20 h.</p>
+					<p><?php echo esc_html( pcz_translated_string( 'pcz_meeting_time', pcz_get('pcz_meeting_time') ) ); ?> · Fais connaissance avec les autres participants. Snacks de bienvenue, shots et jeux brise-glace. En option : échange linguistique dès 20 h.</p>
 				</div>
 				<div class="stop-col">
 					<span class="stop-badge bar"><?php esc_html_e( 'Étape bar', 'pubcrawl-zurich' ); ?></span>

@@ -50,7 +50,17 @@ function pcz_get_reviews() {
 		array( 'text' => __( 'I met a lot of interesting people and had fun. It was a well organised pub crawl. The guides are all very outgoing and make sure the atmosphere is joyful. Would absolutely recommend!', 'pubcrawl-zurich' ), 'name' => 'Nolan R.', 'initials' => 'NR', 'color' => '#FBBC05' ),
 		array( 'text' => __( 'The tour was organised very well by Sebastien and the places we visited were great. I met a lot of great people on the tour. Best night out in Zurich!', 'pubcrawl-zurich' ), 'name' => 'Thomas M.', 'initials' => 'TM', 'color' => '#4285F4' ),
 	);
-	return apply_filters( 'pcz_reviews', $reviews );
+	return  $reviews;
+}
+
+function pcz_get_reviews_fr() {
+	$reviews = array(
+		array( "text" => __( "Ma soirée avec le Pub Crawl Zurich a été l’une des plus cool que j’ai vécues en ville. J’ai rencontré des gens super et j’ai chanté et dansé toute la nuit. Je le recommande à tous ceux qui visitent Zurich", "pubcrawl-zurich" ), "name" => "Ana L.", "initials" => "AL", "color" => "#34A853" ),
+		array( "text" => __( "Une soirée vraiment réussie, des gens géniaux, de beaux bars. Le mélange de touristes et de locaux permet de rencontrer plein de nouvelles personnes et d’avoir des conversations passionnantes", "pubcrawl-zurich" ), "name" => "Jana K.", "initials" => "JK", "color" => "#EA4335" ),
+		array( "text" => __( "J'ai rencontré plein de gens intéressants et je me suis bien amusé. C'était une tournée des pubs très bien organisée. Les guides sont tous très avenants et veillent à ce que l'ambiance soit joyeuse. Je recommande sans hésiter", "pubcrawl-zurich" ), "name" => "Nolan R.", "initials" => "NR", "color" => "#FBBC05" ),
+		array( "text" => __( "Le voyage était parfaitement organisé par Sébastien et les endroits visités étaient superbes. J'ai rencontré plein de gens formidables. Meilleure soirée de mon séjour à Zurich", "pubcrawl-zurich" ), "name" => "Thomas M.", "initials" => "TM", "color" => "#4285F4" ),
+	);
+	return $reviews;
 }
 
 /** Gallery images (filterable). Wix IDs → thumb + full-size URLs. */

@@ -31,11 +31,11 @@ $truncated = mb_strimwidth( $meeting_bar, 0, 15, '' );
             <div>
               <span class="itin-badge badge-meeting">Étape 1 · Bar de rendez-vous</span>
               <h3><?php echo esc_html( pcz_truncate_address() ); ?></h3>
-              <div class="itin-card-location">📍 Selnaustrasse 2, 8001 Zurich</div>
+              <div class="itin-card-location">📍 <?php echo esc_html( pcz_truncate_address_last() ); ?></div>
             </div>
-            <span class="itin-time"><?php echo esc_html( pcz_get( 'pcz_meeting_time' ) ); ?></span>
+            <span class="itin-time"><?php echo esc_html( pcz_translated_string( 'pcz_meeting_time', pcz_get('pcz_meeting_time') ) ); ?></span>
           </div>
-          <p><?php echo esc_html( pcz_get( 'pcz_meeting_time' ) ); ?> · Tout commence ici. Tes Red Hosts t’accueillent avec tout le groupe — un mélange de voyageurs, d’expats et de locaux, prêts pour la nuit. Des snacks offerts t’attendent sur la table. Selon la soirée, on lance des jeux comme le beer pong, des jeux à boire ou des tours brise-glace, pour faire monter l’ambiance et que personne ne reste longtemps un inconnu.</p></div>
+          <p><?php echo esc_html( pcz_translated_string( 'pcz_meeting_time', pcz_get('pcz_meeting_time') ) ); ?> · Tout commence ici. Tes Red Hosts t’accueillent avec tout le groupe — un mélange de voyageurs, d’expats et de locaux, prêts pour la nuit. Des snacks offerts t’attendent sur la table. Selon la soirée, on lance des jeux comme le beer pong, des jeux à boire ou des tours brise-glace, pour faire monter l’ambiance et que personne ne reste longtemps un inconnu.</p></div>
       </div>
 
       <!-- ── TRANSFER ── -->

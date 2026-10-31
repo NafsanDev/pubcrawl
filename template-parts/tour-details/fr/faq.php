@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div>
       <div class="faq-item">
         <button class="faq-q" onclick="faqToggle(this)">Où est le point de rendez-vous&nbsp;? <span class="faq-chevron">▾</span></button>
-        <div class="faq-a">Au <?php echo esc_html( pcz_truncate_address() ); ?> — en plein centre-ville et facile à trouver. Tu reconnaîtras tout de suite nos Red Hosts à leurs t-shirts rouge vif. L’échange linguistique commence dès 20 h, le barathon démarre à <?php echo esc_html( pcz_get( 'pcz_meeting_time' ) ); ?>.</div>
+        <div class="faq-a">Au <?php echo esc_html( pcz_truncate_address() ); ?> — en plein centre-ville et facile à trouver. Tu reconnaîtras tout de suite nos Red Hosts à leurs t-shirts rouge vif. L’échange linguistique commence dès 20 h, le barathon démarre à <?php echo esc_html( pcz_translated_string( 'pcz_meeting_time', pcz_get('pcz_meeting_time') ) ); ?>.</div>
       </div>
 
       <div class="faq-item">

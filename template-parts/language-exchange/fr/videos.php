@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="lx-video-wrap fade-up visible">
       <video autoplay="" muted="" loop="" playsinline="" preload="auto">
-        <source src="<?php echo PCZ_URI . '/assets/videos/language-exchange-video.mp4'; ?>" type="video/mp4">
+        <source src="<?php echo esc_url( pcz_get( 'pcz_le_video_url' ) ); ?>" type="video/mp4">
       </video>
       <button class="lx-video-sound-btn" id="lx-sound-btn" onclick="toggleLxVideoSound()" title="Toggle sound">🔇</button>
     </div>

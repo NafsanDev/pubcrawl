@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endif; ?>
 
 		<div class="reviews-grid">
-			<?php foreach ( pcz_get_reviews() as $pcz_review ) : ?>
+			<?php foreach ( pcz_get_reviews_fr() as $pcz_review ) : ?>
 			<div class="review-card fade-up">
 				<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
 					<div class="review-stars">★★★★★</div>
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="review-avatar" style="background:<?php echo esc_attr( $pcz_review['color'] ); ?>;<?php echo ( '#FBBC05' === $pcz_review['color'] ) ? ' color:#333;' : ''; ?>"><?php echo esc_html( $pcz_review['initials'] ); ?></div>
 					<div>
 						<div class="review-author-name"><?php echo esc_html( $pcz_review['name'] ); ?></div>
-						<div class="review-author-meta"><?php esc_html_e( 'Google Review', 'pubcrawl-zurich' ); ?></div>
+						<div class="review-author-meta"><?php esc_html_e( 'Examen Google', 'pubcrawl-zurich' ); ?></div>
 					</div>
 				</div>
 			</div>

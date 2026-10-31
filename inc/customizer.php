@@ -22,12 +22,11 @@ function pcz_opt( $key, $default = '' ) {
  */
 function pcz_defaults() {
 	return array(
-		'pcz_hero_video_url'     => 'https://video.wixstatic.com/video/dfa67d_f12799cc6f0d47a7b974656a7936b0f4/1080p/mp4/file.mp4',
+		'pcz_hero_video_url'     => 'https://dev.dltbonlinebooking.ph/wp-content/uploads/2026/10/pubcrawl-zurich-hero.mp4',
 		'pcz_hero_title'         => 'Pub Crawl Zurich',
-		'pcz_next_event'         => 'Next Event — July 27, 2026',
 		'pcz_ticket_price_note'  => 'from Fr. 25.-',		
 		'pcz_ticket_url'         => 'https://eventfrog.ch/en/p/gruppen/pub-crawl-zurich-7262837580701343532.html',
-		'pcz_lucerne_url'        => 'https://www.luzernpubcrawl.ch',
+		'pcz_le_video_url'       => 'https://dev.dltbonlinebooking.ph/wp-content/uploads/2026/10/language-exchange-video.mp4',
 		'pcz_google_reviews_url' => 'https://www.google.com/search?q=pub+crawl+zurich+reviews',
 		'pcz_maps_url'           => 'https://maps.app.goo.gl/fV8a8uWt6DnrxNJ46',
 		'pcz_phone'              => '+41 79 285 86 71',
@@ -47,7 +46,6 @@ function pcz_defaults() {
 		'pcz_price_vip'          => 'CHF 35.-',
 		'pcz_le_price_note'  	 => '10.–',
 		'pcz_bachelor_party_price' => 'CHF 45.–',
-		'pcz_newsletter_embed'   => '',
 	);
 }
 
@@ -60,7 +58,6 @@ function pcz_get( $key ) {
 	$default  = isset( $defaults[ $key ] ) ? $defaults[ $key ] : '';
 	$translatable = array(
 		'pcz_hero_title'        => __( 'Pub Crawl Zurich', 'pubcrawl-zurich' ),
-		'pcz_next_event'        => __( 'Next Event — July 27, 2026', 'pubcrawl-zurich' ),
 		'pcz_ticket_price_note' => __( 'from Fr. 25.-', 'pubcrawl-zurich' ),
 		'pcz_meeting_bar'       => __( '2.Akt Sportsbar, Selnaustrasse 2, 8001 Zürich', 'pubcrawl-zurich' ),
 		'pcz_meeting_time'      => __( '9:00 PM', 'pubcrawl-zurich' ),
@@ -84,11 +81,10 @@ function pcz_customize_register( $wp_customize ) {
 
 	$sections = array(
 		'pcz_hero'    => __( 'Hero Section', 'pubcrawl-zurich' ),
+		'pcz_prices'  => __( 'Ticket Prices', 'pubcrawl-zurich' ),
+		'pcz_meeting' => __( 'Meeting Point & Schedule', 'pubcrawl-zurich' ),		
 		'pcz_links'   => __( 'External Links', 'pubcrawl-zurich' ),
 		'pcz_contact' => __( 'Contact & Social', 'pubcrawl-zurich' ),
-		'pcz_meeting' => __( 'Meeting Point & Schedule', 'pubcrawl-zurich' ),
-		'pcz_prices'  => __( 'Ticket Prices', 'pubcrawl-zurich' ),
-		'pcz_news'    => __( 'Newsletter Embed', 'pubcrawl-zurich' ),
 	);
 	foreach ( $sections as $id => $title ) {
 		$wp_customize->add_section( $id, array( 'title' => $title, 'panel' => 'pcz_panel' ) );
@@ -96,14 +92,13 @@ function pcz_customize_register( $wp_customize ) {
 
 	// key => [section, label, type, sanitize]
 	$fields = array(
-		'pcz_hero_video_url'     => array( 'pcz_hero', __( 'Hero background video URL (MP4)', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
-		'pcz_hero_title'         => array( 'pcz_hero', __( 'Hero title', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
-		'pcz_next_event'         => array( 'pcz_hero', __( 'Next event line', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
-		'pcz_ticket_price_note'  => array( 'pcz_hero', __( 'Hero ticket price note', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
+		'pcz_hero_video_url'     => array( 'pcz_hero', __( 'Hero Home Video URL (MP4)', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
+		'pcz_hero_title'         => array( 'pcz_hero', __( 'Hero Home Title', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
+		'pcz_ticket_price_note'  => array( 'pcz_hero', __( 'Hero Home Ticket Price Note', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_ticket_url'         => array( 'pcz_links', __( 'Ticket / booking URL', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
-		'pcz_lucerne_url'        => array( 'pcz_links', __( 'Sister site URL (Lucerne)', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
-		'pcz_google_reviews_url' => array( 'pcz_links', __( 'Google Reviews URL', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
-		'pcz_maps_url'           => array( 'pcz_links', __( 'Google Maps link to meeting bar', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
+		'pcz_maps_url'           => array( 'pcz_links', __( 'Google Maps link to meeting bar', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),		
+		'pcz_google_reviews_url' => array( 'pcz_links', __( 'Google Reviews URL', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),		
+		'pcz_le_video_url'        => array( 'pcz_links', __( 'Language Exchange Video URL (MP4)', 'pubcrawl-zurich' ), 'url', 'esc_url_raw' ),
 		'pcz_phone'              => array( 'pcz_contact', __( 'Phone (display)', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_phone_href'         => array( 'pcz_contact', __( 'Phone (tel: link, e.g. +41792858671)', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_whatsapp_href'      => array( 'pcz_contact', __( 'WhatsApp number (digits only, no +)', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
@@ -121,7 +116,6 @@ function pcz_customize_register( $wp_customize ) {
 		'pcz_price_vip'          => array( 'pcz_prices', __( 'VIP price', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_le_price_note'      => array( 'pcz_prices', __( 'Language exchange price', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
 		'pcz_bachelor_party_price' => array( 'pcz_prices', __( 'Bachelor party price', 'pubcrawl-zurich' ), 'text', 'sanitize_text_field' ),
-		'pcz_newsletter_embed'   => array( 'pcz_news', __( 'Newsletter signup embed HTML (e.g. Brevo). Leave empty to hide.', 'pubcrawl-zurich' ), 'textarea', 'pcz_sanitize_embed' ),
 	);
 
 	foreach ( $fields as $id => $f ) {
@@ -131,20 +125,16 @@ function pcz_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'pcz_customize_register' );
 
-/**
- * Allow form/script markup from administrators only (newsletter embeds need it);
- * everyone else is limited to normal post HTML.
- */
-function pcz_sanitize_embed( $value ) {
-	if ( current_user_can( 'unfiltered_html' ) ) {
-		return $value;
-	}
-	return wp_kses_post( $value );
-}
-
 function pcz_truncate_address() {
 	$meeting_bar = pcz_get( 'pcz_meeting_bar' );
 	$truncated = mb_strimwidth( $meeting_bar, 0, 15, '' );
+
+	return $truncated;
+}
+
+function pcz_truncate_address_last() {
+	$meeting_bar = pcz_get( 'pcz_meeting_bar' );
+	$truncated = mb_substr($meeting_bar, 16, null, 'UTF-8');
 
 	return $truncated;
 }

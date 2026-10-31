@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a href="<?php echo esc_url( home_url( '/#video' ) ); ?>"><?php esc_html_e( 'Contact Us', 'pubcrawl-zurich' ); ?></a>
 			<a href="<?php echo esc_url( $pcz_terms_url ); ?>"><?php esc_html_e( 'Terms & Conditions', 'pubcrawl-zurich' ); ?></a>
 			<?php if ( pcz_get( 'pcz_lucerne_url' ) ) : ?>
-				<a href="<?php echo esc_url( pcz_get( 'pcz_lucerne_url' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Also in Lucerne →', 'pubcrawl-zurich' ); ?></a>
+				<a href="https://www.luzernpubcrawl.ch/" target="_blank" rel="noopener"><?php esc_html_e( 'Also in Lucerne →', 'pubcrawl-zurich' ); ?></a>
 			<?php endif; ?>
 		<?php endif; ?>
 	</div>

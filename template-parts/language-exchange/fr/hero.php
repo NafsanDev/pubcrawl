@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <img class="hero-flag" src="<?php echo PCZ_URI . '/assets/images/exchange/flag-russia.png';?>" alt="Drapeau russe" width="36" height="24">
     <img class="hero-flag" src="<?php echo PCZ_URI . '/assets/images/exchange/flag-japan.png';?>" alt="Drapeau japonais" width="36" height="24">
     </div>
-    <div class="lx-hero-schedule"><?php echo esc_html( pcz_get( 'pcz_meeting_day' ) ); ?>, 20–22 h</div>
+    <div class="lx-hero-schedule"><?php echo esc_html( pcz_translated_string( 'pcz_meeting_day', pcz_get('pcz_meeting_day') ) ); ?>, 20–22 h</div>
   </div>
 </div>
 
